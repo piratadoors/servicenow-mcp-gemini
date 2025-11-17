@@ -1,0 +1,36 @@
+{
+  "name": "servicenow-mcp-gemini",
+  "version": "0.1.0",
+  "display_name": "ServiceNow MCP (Echelon)",
+  "description": "An alternative ServiceNow MCP server from echelon-ai-labs, adapted for Gemini CLI.",
+  "mcpServers": {
+    "servicenow_echelon": {
+      "command": ["python", "run_server.py"],
+      "timeout": 120,
+      "env": [
+        {
+          "name": "SERVICENOW_INSTANCE_URL",
+          "description": "Your ServiceNow instance URL (e.g., https://your-instance.service-now.com)"
+        },
+        {
+          "name": "SERVICENOW_USERNAME",
+          "description": "Your ServiceNow username"
+        },
+        {
+          "name": "SERVICENOW_PASSWORD",
+          "description": "Your ServiceNow password"
+        },
+        {
+          "name": "SERVICENOW_AUTH_TYPE",
+          "description": "Authentication type (e.g., basic, oauth, api_key)",
+          "default": "basic"
+        },
+        {
+            "name": "MCP_TOOL_PACKAGE",
+            "description": "The tool package to load (e.g., full, service_desk). Defaults to 'full'.",
+            "default": "full"
+        }
+      ]
+    }
+  }
+}
