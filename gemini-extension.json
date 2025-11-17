@@ -5,7 +5,7 @@
   "description": "An alternative ServiceNow MCP server from echelon-ai-labs, adapted for Gemini CLI.",
   "mcpServers": {
     "servicenow_echelon": {
-      "command": ["python", "run_server.py"],
+      "command": ["python3", "run_server.py"],
       "timeout": 120,
       "env": [
         {
