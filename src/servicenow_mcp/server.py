@@ -106,9 +106,7 @@ class ServiceNowMCP:
         self._determine_enabled_tools()
 
         # Get tool definitions, passing the aliased KB tool functions if needed
-        self.tool_definitions = get_tool_definitions(
-            create_kb_category_tool, list_kb_categories_tool
-        )
+        self.tool_definitions = get_tool_definitions()
 
         self._register_handlers()
 
